@@ -6,8 +6,18 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 namespace Jitesoft\Statement\Models;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Comment
+ * @ORM\Entity
+ * @ORM\Table(name="comments")
+ */
 class Comment {
 
+    /**
+     * @var
+     */
     protected $author;
 
     protected $parent;

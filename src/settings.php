@@ -10,13 +10,14 @@ return [
             'connection' => [
                 'driver'   => env('DB_TYPE','pdo_sqlite'),
                 'host'     => env('DB_HOST', 'localhost'),
-                'dbname'   => env('DB_NAME', ':memory:'),
+                'path'     => env('DB_SQLITE_PATH', ':memory:'),
+                'dbname'   => env('DB_NAME', 'db_name'),
                 'user'     => env('DB_USER', 'db_user'),
                 'password' => env('DB_PASSWORD', 'secret'),
             ],
             'meta' => [
                 'entity_paths' => [BASE_DIR . '/src/Models'],
-                'dev_mode'     => env('DEVELOPMENT', true),
+                'dev_mode'     => env('DEVELOPMENT', false),
                 'proxy_dir'    => STORAGE_DIR . '/proxies'
             ]
         ]
